@@ -5,4 +5,4 @@ The database has been created with Microsoft SQL Server 2019. The scripts in R, 
   
 The aim of this project is also to develop some application explicitly for training and personal learning purposes or code reviewing. I do not intend to provide any part of code or script or file for commercial use. I do not own and will not own any responsability for the misuse of the scripts/data/files in this project nor I do own or will own any resposability for the data in it. I do not own or will own any responsability for damages or any other harmful or legally relevant events associated with the misuse of the scripts/file published in this repository.
 
-You will find a quick quick guide on how to run the scripts.
+I will also provide a quick guide on how to run the scripts.
