@@ -1,3 +1,6 @@
+/* The data provided in this script doesn't represent effective and real data on cars, humnas or other entities. All the data in this script 
+/* are simulated and created for training purposes. I do not own and I will not own any responsability for the misuse of the data here provided nor I do or I will do for the script itself */
+
 CREATE DATABASE ParkingValetPlus
 ON
 (
