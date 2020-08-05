@@ -2,13 +2,13 @@ CREATE DATABASE ParkingValetPlus
 ON
 (
 	NAME = ParkingValetPlus,
-	FILENAME = 'H:\BACKUP\Documenti\Formazione - Master\Microsoft TSQL\Progetti\ParkingValet+\Database\ParkingValetPlus.mdf'
+	FILENAME = '@@ INSERT A FOLDER DESTINATION @@\ParkingValetPlus.mdf'
 )
 
 LOG ON
 (
 	NAME = ParkingValetPlus_log,
-	FILENAME = 'H:\BACKUP\Documenti\Formazione - Master\Microsoft TSQL\Progetti\ParkingValet+\Database\ParkingValetPlus_log.mdf'
+	FILENAME = '@@ INSERT A FOLDER DESTINATION @@\ParkingValetPlus_log.mdf'
 )
 
 
@@ -305,7 +305,7 @@ VALUES
 (15,'Bianchi, Colombo e Pellegrino s.r.l. ','Frame Sincronizzata Nextgeneration ','mmazza@leone.com ','IT37977950445','Via Industriale 129','Parma','44.8013','10.3280',geography::Point(44.8013, 10.3280, 4326),'IT'),
 (16,'Negri SPA ','Array Decentralizzata Real-Time ','gallo.marianita@dangelo.it ','IT66081510985','Via Gianni Torino 3','Reggio Emilia','44.6086','10.5947',geography::Point(44.6086, 10.5947, 4326),'IT'),
 (17,'Gatti, Ferrara e Cattaneo Group ','Standardizzazione Sincronizzata Interattiva ','mvilla@piras.com ','IT74601460277','Via Gran Dibattito 23','Bologna','44.4936','11.3430',geography::Point(44.4936, 11.3430, 4326),'IT'),
-(18,'Gentile-Galli SPA ','Complessità Robusta Full-Range ','camato@costa.it ','IT04663700468','Via Gran Dibentileto 23','Bologna','44.4936','11.3430',geography::Point(44.4936, 11.3430, 4326),'IT'),
+(18,'Gentile-Galli SPA ','ComplessitÃ  Robusta Full-Range ','camato@costa.it ','IT04663700468','Via Gran Dibentileto 23','Bologna','44.4936','11.3430',geography::Point(44.4936, 11.3430, 4326),'IT'),
 (19,'Benedetti, Ferri e Dangelo s.r.l. ','Moderazione Progressiva Ottima ','rosaria74@marini.com ','IT30487491083','Ven Industriale 129','MIlano','45.4668','9.1905',geography::Point(45.4668, 9.1905, 4326),'IT'),
 (20,'Monti-De Santis s.r.l. ','Struttura Di Prezzo Distribuita Motivazionale ','deluca.davide@vitale.it ','IT03671380420','Zona Artigianale','Trieste','45.6500','13.7706',geography::Point(45.6500, 13.7706, 4326),'IT'),
 (21,'Jost GmbH ','Utilize Interactive Experiences','stephan.ulrich@bar.com','DE4326246802','Ansgarstr. 4','Munich','48.1371','11.5753',geography::Point(48.1371, 11.5753, 4326),'DE'),
@@ -315,19 +315,19 @@ VALUES
 (25,'Martin KG ','Intuitive Zerotolerance Infrastructure','fleischmann.peggy@kuhlmann.de','DE4240991580','Leimkugelstr. 13','Berlin','52.5170','52.5170',geography::Point(52.5170, 52.5170, 4326),'DE'),
 (26,'Weis KG ','Virtual Grid-Enabled Capability','claudia55@geiger.de','DE3112389208','Industriestr. 912','Munich','48.1371','11.5753',geography::Point(48.1371, 11.5753, 4326),'DE'),
 (27,'Beyer Stiftung & Co. KG ','Persevering Systemic Benchmark','metz.reinhard@wittmann.com','DE2873743897','Lehmbergerstr. 2','Ulm','48.3974','9.9934',geography::Point(48.3974, 9.9934, 4326),'DE'),
-(28,'Meier ','Facetoface Impactful Circuit','thea.winkler@schramm.de','DE4757348170','Südring 25','Ulm','48.3974','9.9934',geography::Point(48.3974, 9.9934, 4326),'DE'),
+(28,'Meier ','Facetoface Impactful Circuit','thea.winkler@schramm.de','DE4757348170','SÃ¼dring 25','Ulm','48.3974','9.9934',geography::Point(48.3974, 9.9934, 4326),'DE'),
 (29,'Voigt Freund GmbH & Co. OHG ','Extended Demand-Driven Synergy','hschmidt@horn.org','DE8104209601','Hofstr. 16','Frankfurt','50.1106','8.6820',geography::Point(50.1106, 8.6820, 4326),'DE'),
 (30,'Stephan Ott KG ','Centralized Local Service-Desk','diehl.nico@buttner.com','DE8658154710','Industriestr. 91','Frankfurt','50.1106','8.6820',geography::Point(50.1106, 8.6820, 4326),'DE'),
-(31,'Gilbert ','Lassurance De Concrétiser Vos Projets','simone15@pineau.com ','199 998 113 04734 ','86 boulevard de Prague','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
-(32,'Lebreton ','Le Pouvoir De Rouler À La Pointe ','jeannine45@pichon.com ','288 972 508 52156 ','51 Square de la Couronne','Mentone','43.7753','7.5029',geography::Point(43.7753, 7.5029, 4326),'FR'),
-(33,'Gautier ','Lavantage Davancer Avant-Tout ','hbouchet@philippe.org ','908 149 925 05409 ','68 rue Léon Dierx','Bordeaux','44.8412','-0.580',geography::Point(44.8412, -0.580, 4326),'FR'),
-(34,'Lamy ','Le Pouvoir De Concrétiser Vos Projets À Sa Source ','charles.barthelemy@delmas.org ','343 497 228 00621 ','82 Rue Bonnet','Marseille','43.2961','5.3699',geography::Point(43.2961, 5.3699, 4326),'FR'),
-(35,'Valette ','La Liberté De Rouler Avant-Tout ','breton.yves@allard.fr ','218 186 898 07881 ','39 Rue de Strasbourg','Montpellier','43.6112','3.8767',geography::Point(43.6112, 3.8767, 4326),'FR'),
-(36,'Launay S.A.S. ','Le Droit Dévoluer À Sa Source ','martin28@louis.org ','482 866 936 00248 ','20 boulevard Amiral Courbet','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
-(37,'Lefevre ','Le Confort Datteindre Vos Buts À La Pointe ','catherine69@paul.com ','723 414 959 00954 ','71 rue Jean-Monnet','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
-(38,'Pruvost ','Lavantage De Louer De Manière Sûre ','rdupont@chevallier.fr ','642 020 127 00345 ','53 rue Beauvau','Nantes','47.2186','-1.554',geography::Point(47.2186, -1.554, 4326),'FR'),
+(31,'Gilbert ','Lassurance De ConcrÃ©tiser Vos Projets','simone15@pineau.com ','199 998 113 04734 ','86 boulevard de Prague','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
+(32,'Lebreton ','Le Pouvoir De Rouler Ã€ La Pointe ','jeannine45@pichon.com ','288 972 508 52156 ','51 Square de la Couronne','Mentone','43.7753','7.5029',geography::Point(43.7753, 7.5029, 4326),'FR'),
+(33,'Gautier ','Lavantage Davancer Avant-Tout ','hbouchet@philippe.org ','908 149 925 05409 ','68 rue LÃ©on Dierx','Bordeaux','44.8412','-0.580',geography::Point(44.8412, -0.580, 4326),'FR'),
+(34,'Lamy ','Le Pouvoir De ConcrÃ©tiser Vos Projets Ã€ Sa Source ','charles.barthelemy@delmas.org ','343 497 228 00621 ','82 Rue Bonnet','Marseille','43.2961','5.3699',geography::Point(43.2961, 5.3699, 4326),'FR'),
+(35,'Valette ','La LibertÃ© De Rouler Avant-Tout ','breton.yves@allard.fr ','218 186 898 07881 ','39 Rue de Strasbourg','Montpellier','43.6112','3.8767',geography::Point(43.6112, 3.8767, 4326),'FR'),
+(36,'Launay S.A.S. ','Le Droit DÃ©voluer Ã€ Sa Source ','martin28@louis.org ','482 866 936 00248 ','20 boulevard Amiral Courbet','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
+(37,'Lefevre ','Le Confort Datteindre Vos Buts Ã€ La Pointe ','catherine69@paul.com ','723 414 959 00954 ','71 rue Jean-Monnet','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR'),
+(38,'Pruvost ','Lavantage De Louer De ManiÃ¨re SÃ»re ','rdupont@chevallier.fr ','642 020 127 00345 ','53 rue Beauvau','Nantes','47.2186','-1.554',geography::Point(47.2186, -1.554, 4326),'FR'),
 (39,'Maillard S.A.S. ','Le Droit De Rouler Avant-Tout ','blanchard.alexandria@lopez.fr ','483 529 780 73731 ','4 boulevard Bryas','Marseille','43.2961','5.3699',geography::Point(43.2961, 5.3699, 4326),'FR'),
-(40,'Laroche ','Le Plaisir Dinnover En Toute Tranquilité ','mdidier@bonneau.com ','236 609 954 89295 ','55 avenue du Marechal Juin','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR');
+(40,'Laroche ','Le Plaisir Dinnover En Toute TranquilitÃ© ','mdidier@bonneau.com ','236 609 954 89295 ','55 avenue du Marechal Juin','Paris','48.8566','2.3514',geography::Point(48.8566, 2.3514, 4326),'FR');
 
 
 
