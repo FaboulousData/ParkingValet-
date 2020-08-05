@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ParkingValet+", "ParkingValet+\ParkingValet+.dtproj", "{7F4A1EA4-38B1-46A5-B21F-A9D39DFCB5D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F4A1EA4-38B1-46A5-B21F-A9D39DFCB5D0}.Development|Default.ActiveCfg = Development
+		{7F4A1EA4-38B1-46A5-B21F-A9D39DFCB5D0}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89FC6D36-7C1E-4E21-983B-7337F2F0FC8D}
+	EndGlobalSection
+EndGlobal
