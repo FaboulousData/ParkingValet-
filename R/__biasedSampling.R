@@ -14,7 +14,9 @@ biasedSampling<-function(n, pop, order, distr, repl)
   # I do not own any responsability for the misuse of the scripts/data/files in this project nor I do own any resposability for the data in it.
   #
   #
-  # The aim of this script is to develop a procedure for a biased sampling procedure with a given underlying distribution (gamma)
+  # The aim of this script is to develop a procedure for a biased sampling procedure with a given underlying distribution. The need to develope
+  # a biased sampling procedure is strictly linked with the need to produce 'sample and fictious' data for training purposes that shows some kind of behaviour different
+  # from uniform distributed data.
   #
   # INPUT: n (sample numerosity), pop (data - vector), order('desc', 'asc'), distr ('gamma'), repl ('FALSE')
   # OUTPUT: a biased sample of n elements, based on a random paramterized gamma distribution
