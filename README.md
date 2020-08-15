@@ -1,5 +1,5 @@
 # ParkingValet+
-The aim of this project is to develop a database, a data engine, an ETL procedure and a visualization tool for a fictious parking lot management system.
+The aim of this project is to develop a database, a set of fictious data, an ETL procedure and a visualization tool for a fictious parking lot management system.
 
 The database has been created with Microsoft SQL Server 2019. Some scripts in R have been written to simulate parking data records, an ETL procedure has been set up to load automatically the data into the database using Microsoft Visual Studio 2019 (SQL Service Integration Service) and a visualization tool has been used to provide insights and some useful KPIs (currently under revision) with PowerBI, using DAX language to perform basic aggregation and calculation on attributes and data.
   
