@@ -19,7 +19,7 @@
 #
 # The aim of this project is to develop some application for training and personal learning purposes. 
 # I do not intend to provide any part of code or script or file for commercial use. 
-# I do not own any responsability for the misuse of the scripts/data/files in this project nor I do own any resposability for the data in it.
+# I do not own any responsibility for the misuse of the scripts/data/files in this project nor I do own any resposibility for the data in it.
 #
 #
 #
@@ -43,7 +43,6 @@
 #   - to effective quantity/time of parking might be an idea for further improvements)
 
 
-
 '#########################'
 '0) Preliminary tasks'
 '#########################'
@@ -52,8 +51,7 @@ rm(list=ls())
 
 
 #setting work directory
-## @@ --> !! INSERT YOUR PERSONAL SETTINGS !!
-setwd('@@')
+setwd('E:/Progetti/ParkingValet+')
 
 # loading libraries 
 library(RODBC)
@@ -68,12 +66,12 @@ source("__biasedSampling.r")
 
 
 # establishing db connection
-## @@ --> !! INSERT YOUR PERSONAL SETTINGS !!
+## !! INSERT YOUR 
 db<-odbcDriverConnect(connection='driver={SQL SERVER};
-                                  server=@@;
+                                  server=DESKTOP-V6A73DH;
                                   database=ParkingValetPlus;
-                                  uid=@@;
-                                  pwd=@@;
+                                  uid=sa;
+                                  pwd=1984;
                                   trusted_connection=TRUE',
                                   rows_at_time=1, case='nochange')
 
@@ -93,8 +91,28 @@ daysback<-0
 
 ## How many ParkingEvents would you like to generate?
 ########################################################################
-n<-50
+CurrentDate<-Sys.time()
+x<-seq(30,200,10)
 
+npae_prob<-read.csv2(file="2020-08-23_SamplingProbabilities-nPullingEevent.csv", header=FALSE, sep=",")
+colnames(npae_prob)<-x
+rownames(npae_prob)<-c('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
+
+dayname<-weekdays.POSIXt(CurrentDate)
+
+# For the sampling of n, assigning different probabilities vectors
+sampling_prob=switch(
+  dayname,
+  'Sunday'= as.numeric(as.vector(npae_prob[1,])),
+  'Monday'= as.numeric(as.vector(npae_prob[2,])),
+  'Tuesday'= as.numeric(as.vector(npae_prob[3,])),
+  'Wednesday'= as.numeric(as.vector(npae_prob[4,])),
+  'Thursday'= as.numeric(as.vector(npae_prob[5,])),
+  'Friday'= as.numeric(as.vector(npae_prob[6,])),
+  'Saturday'= as.numeric(as.vector(npae_prob[7,])),
+)
+
+n<-sample(x,1,prob=sampling_prob)
 
 
 ## Creating ParkCustomerVeichles
@@ -178,8 +196,8 @@ ParkParkingEvent$Privacy<-sample(c('Yes','No'),n,replace=TRUE)
 
 # Creating Parking_DateTimes and random Pulling_times
 x<-Sys.time()-as.difftime(daysback,units='days')
-y<-x+as.difftime(60*sample(1:200,n, replace=TRUE),units="mins")
-y<-y+as.difftime(60*sample(-200:200,n,replace=TRUE),units="secs")
+y<-x+as.difftime(40*sample(1:200,n, replace=TRUE),units="mins")
+y<-y+as.difftime(40*sample(-200:200,n,replace=TRUE),units="secs")
 
 CurrentDateTime<-x
 
@@ -257,7 +275,7 @@ if(nrow(outID)>=1)
 
 
   '####################################################################################################################'
-  '4) FISCALINVOICE: generating perceived services, issuing receipt and generating payment log'
+  '3) FISCALINVOICE: generating perceived services, issuing receipt and generating payment log'
   '####################################################################################################################'
 
 
@@ -287,11 +305,8 @@ if(nrow(outID)>=1)
   # assigning InvoiceID to CurrentParkParkingEvent
   CurrentParkPullingEvent$InvoiceID<-FiscalInvoice$InvoiceID
 
-  
-  
-  
   '####################################################################################################################'
-  '5) PAYMENTLOG: generating payment logs for invoices'
+  '4) PAYMENTLOG: generating payment logs for invoices'
   '####################################################################################################################'
 
   # For each Invoice generating a PaymentLog
@@ -325,7 +340,7 @@ if(nrow(outID)>=1)
 
   
   '####################################################################################################################'
-  '6) CUSTODYLOG'
+  '5) CUSTODYLOG'
   '####################################################################################################################'
   CustodyLog<-sqlQuery(db,'SELECT * FROM Park.CustodyLog ORDER BY CustodyLogID ASC')
   lastID<-CustodyLog$CustodyLogID[nrow(CustodyLog)]
@@ -350,16 +365,15 @@ if(nrow(outID)>=1)
   ParkParkingEvent$CustodyLogID<-ParkCustodyLog$CustodyLogID
   
   
-  ## Updating the Park.OccupiedParkingLot: sending BindParkingEvent, CurrentParkPullingEvent to ParkingLotManagement in order to  
+  ## Updating the Park.OccupiedParkingLot: sending BindParkingEvent, CurrentParkPullingEvent to ParkingLotManagement in order to free actual pulling parking lots
   ####################################################################################################################
   ParkingLotManagement(db, CurrentDateTime, NULL, BindParkingEvent, CurrentParkPullingEvent)
   
   
   
   
-  '####################################################################################################################'
-  '7) EXPORTRESULTS: exporting relevant data to the choosen folder in order to load data into the database'
-  '####################################################################################################################' 
+  
+  
   
   
   # adjusting the date to be a character
